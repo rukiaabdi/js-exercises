@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Destination</title>
+</head>
+<body>
+
+    <h1 id="title">My Dream Destination</h1>
+
+    <img
+        id="destinationImage"
+        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+        alt="Travel destination"
+        width="300"
+    >
+
+    <br><br>
+
+    <button onclick="changeImage()">Customize Image</button>
+
+    <script>
+
+        function changeImage() {
+
+            const image = document.querySelector("#destinationImage");
+
+            const url = prompt("Enter the image URL:");
+            const borderColor = prompt("Enter the border color:");
+            const width = prompt("Enter the width in pixels:");
+            const height = prompt("Enter the height in pixels:");
+            const borderRadius = prompt("Enter the border radius in pixels:");
+
+            image.setAttribute("src", url);
+
+            image.style.border = `3px solid ${borderColor}`;
+
+            image.style.width = `${width}px`;
+
+            image.style.height = `${height}px`;
+
+            image.style.borderRadius = `${borderRadius}px`;
+
+            image.style.padding = "10px";
+
+            image.style.backgroundColor = "#eeeeee";
+        }
+
+    </script>
+
+</body>
+</html>
